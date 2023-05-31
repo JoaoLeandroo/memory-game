@@ -1,0 +1,60 @@
+body {
+    max-width: 1280px;
+    background-color: #7D8894;
+    margin: 0 auto;
+    /* overflow: hidden; */
+    display: flex;
+}
+
+main {
+    width: 95%;
+    /* height: 100vh; */
+    border: 1px solid red;
+}
+
+main .firist-image {
+    position: absolute;
+    opacity: 0.7;
+    bottom: -70px;
+    left: -90px;
+    z-index: -1;
+}
+
+main .two-image {
+    position: absolute;
+    bottom: -60px;
+    right: -50px;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+main .game-area {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    gap: 10px;
+}
+
+main .game-area img{
+    width: 200px;
+}
+
+aside {
+    width: 5%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+aside img {
+    width: 30px;
+    transition: 0.4s ease-in-out;
+}
+
+aside img:hover {
+    width: 40px;
+}
