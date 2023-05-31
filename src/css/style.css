@@ -1,20 +1,22 @@
 body {
     max-width: 1280px;
+    height: 100vh;
     background-color: #7D8894;
     margin: 0 auto;
-    /* overflow: hidden; */
+    overflow: hidden;
+
     display: flex;
 }
 
+
 main {
     width: 95%;
-    /* height: 100vh; */
-    border: 1px solid red;
+    background-color: #652efe69;
 }
 
 main .firist-image {
     position: absolute;
-    opacity: 0.7;
+    opacity: 0.4;
     bottom: -70px;
     left: -90px;
     z-index: -1;
@@ -24,25 +26,62 @@ main .two-image {
     position: absolute;
     bottom: -60px;
     right: -50px;
-    opacity: 0.7;
+    opacity: 0.4;
     z-index: -1;
 }
 
 main .game-area {
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    justify-items: center;
-    gap: 10px;
+    height: 100%;
+}
+
+.result-game {
+    width: 100%;
+    height: 60px;
+    color: #fff;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 main .game-area img{
     width: 200px;
 }
 
+.game-area .start-game {
+    width: 100%;
+    height: 90%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.start-game button {
+    width: 200px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    font-size: 25px;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+}
+
+.start-game button:hover {
+    width: 220px;
+    height: 55px;
+    background-color: #04B45F;
+}
+
 aside {
     width: 5%;
-    border: 1px solid black;
+    background-color: #08088aa2;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,6 +90,7 @@ aside {
 }
 
 aside img {
+    filter: invert(1);
     width: 30px;
     transition: 0.4s ease-in-out;
 }
