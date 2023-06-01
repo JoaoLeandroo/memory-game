@@ -1,6 +1,10 @@
-const gameMemory = document.querySelector(".game-memory")
 const buttonStart = document.querySelector(".startGame")
-const characters = [];
+const buttonReiniciar = document.querySelector(".reiniciar")
+let gameMemory = document.querySelector(".game-memory")
+
+let characters = [];
+let firistCard = ''
+let secondCard = ''
 
 buttonStart.addEventListener('click', () => {
    const numerosSorteados = sortearNumeros()
@@ -47,16 +51,32 @@ buttonStart.addEventListener('click', () => {
         '39',
         '40',
         '41',
-        
+        '42',
+        '43',
+        '44',
+        '45',
+        '46',
+        '47',
+        '48'   
    ]
 
    for(let i=0; i < 5; i++){
     characters.push(personagensSorteados[numerosSorteados[i]])
    }
-
    loadGame()
+
+   buttonStart.style.display = 'none'
 })
 
+buttonReiniciar.addEventListener('click', () => {
+    gameMemory.innerHTML = ''
+    firistCard = ''
+    secondCard = ''
+    characters = []
+
+    buttonReiniciar.style.display = 'none'
+    buttonStart.style.display = 'block'
+})
 
 const createElement = (tag, className) => {
     const element = document.createElement(tag)
@@ -64,14 +84,13 @@ const createElement = (tag, className) => {
     return element
 }
 
-let firistCard = ''
-let secondCard = ''
 
 const checkEndGame = () => {
     const disabledCards = document.querySelectorAll('.disabled-card')
 
     if(disabledCards.length === 10) {
-        alert("fim do jogo")
+        alert("Parabéns, Você Venceu!")
+        buttonReiniciar.style.display = 'block'
     }
 }
 
@@ -165,4 +184,3 @@ function sortearNumeros() {
 
     return numerosSorteados;
   }
-
