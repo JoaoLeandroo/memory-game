@@ -111,7 +111,7 @@ main .game-area {
 }
 
 .card .back {
-    background-image: url('../assets/images-card/card-back.png');
+    background-image: url('../images-card/card-back.png');
     backface-visibility: hidden;
     border-radius: 0.625rem;
 }
