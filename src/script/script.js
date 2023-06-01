@@ -1,12 +1,61 @@
 const gameMemory = document.querySelector(".game-memory")
+const buttonStart = document.querySelector(".startGame")
+const characters = [];
 
-const characters =  [
-    '1',
-    '2',
-    '3',
-    '4',
-    '5'
-]
+buttonStart.addEventListener('click', () => {
+   const numerosSorteados = sortearNumeros()
+   const personagensSorteados = [
+        '0',
+        '1',
+        '2',
+        '3',
+        '4',
+        '5',
+        '6',
+        '7',
+        '8',
+        '9',
+        '10',
+        '11',
+        '12',
+        '13',
+        '14',
+        '15',
+        '16',
+        '17',
+        '18',
+        '19',
+        '20',
+        '21',
+        '22',
+        '23',
+        '24',
+        '25',
+        '26',
+        '27',
+        '28',
+        '29',
+        '30',
+        '31',
+        '32',
+        '33',
+        '34',
+        '35',
+        '36',
+        '37',
+        '38',
+        '39',
+        '40',
+        '41',
+        
+   ]
+
+   for(let i=0; i < 5; i++){
+    characters.push(personagensSorteados[numerosSorteados[i]])
+   }
+
+   loadGame()
+})
 
 
 const createElement = (tag, className) => {
@@ -98,4 +147,22 @@ const loadGame = () => {
     })
 }
 
-loadGame()
+
+function sortearNumeros() {
+    let numerosSorteados = [];
+
+    for (let i = 0; i < 5; i++) {
+      let numeroAleatorio;
+      let repetido;
+
+      do {
+        numeroAleatorio = Math.floor(Math.random() * 42);;
+        repetido = numerosSorteados.includes(numeroAleatorio);
+      } while (repetido);
+
+      numerosSorteados.push(numeroAleatorio);
+    }
+
+    return numerosSorteados;
+  }
+
