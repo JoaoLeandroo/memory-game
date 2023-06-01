@@ -65,7 +65,8 @@ main .game-area {
     transform-style: preserve-3d;
 }
 
-.card:hover {
+
+.revel-card {
     transform: rotateY(180deg);
 }
 
@@ -75,6 +76,7 @@ main .game-area {
     position: absolute;
     background-size: cover;
     background-position: center;
+    transition: all 0.8s ease;
 }
 
 .card .front {
@@ -91,6 +93,10 @@ main .game-area {
     background-image: url('../assets/images-card/card-back.png');
     backface-visibility: hidden;
     border-radius: 10px;
+}
+
+.disabled-card {
+    filter: saturate(0);
 }
 
 
